@@ -19,6 +19,7 @@ const template = fs.readFileSync(
   'utf8'
 );
 
+// 调用函数, 获取实例
 const render = Render.createBundleRenderer(serverBundle, { template });
 
 // router.get('/', async (ctx) => {
@@ -39,7 +40,7 @@ const render = Render.createBundleRenderer(serverBundle, { template });
 // 刷新浏览器, 向服务器请求
 router.get('/(.*)', async (ctx) => {
   ctx.body = await new Promise((resolve, reject) => {
-    // 纯字符串
+    // 根据实例生成纯字符串
     render.renderToString({ url: ctx.url }, (err, html) => {
       if (err && err.code == 404) {
         ctx.status = 404;
@@ -56,3 +57,6 @@ app.use(static(path.resolve(__dirname, 'dist')));
 app.use(router.routes());
 
 app.listen(3000);
+
+// 所有页面直接访问都是服务端渲染(包括刷新)
+// 第一次加载页面是服务端渲染, 后续是通过前端路由

@@ -1,9 +1,18 @@
 <template>
-  <div>Bar</div>
+  <div>Bar
+
+    <div>
+      {{$store.state.name}}
+    </div>
+  </div>
 </template>
 
 <script>
-export default {};
+export default {
+  asyncData(store) {
+    return store.dispatch('changeName')
+  }
+};
 </script>
 
 <style scoped>

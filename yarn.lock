@@ -5416,6 +5416,11 @@ vue-loader@^15.9.8:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
+vue-router@^3.5.2:
+  version "3.5.2"
+  resolved "https://registry.nlark.com/vue-router/download/vue-router-3.5.2.tgz?cache=0&sync_timestamp=1628495505697&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fvue-router%2Fdownload%2Fvue-router-3.5.2.tgz#5f55e3f251970e36c3e8d88a7cd2d67a350ade5c"
+  integrity sha1-X1Xj8lGXDjbD6NiKfNLWejUK3lw=
+
 vue-server-renderer@^2.6.14:
   version "2.6.14"
   resolved "https://registry.nlark.com/vue-server-renderer/download/vue-server-renderer-2.6.14.tgz#c8bffff152df6b47b858818ef8d524d2fc351654"
